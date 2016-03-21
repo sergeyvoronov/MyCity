@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My city</string>
+    <string name="request_number">CE-1257283</string>
+    <string name="back">Back</string>
+    <string name="created">Created</string>
+    <string name="registered">Rigistered</string>
+    <string name="resolve">Resolve to</string>
+    <string name="company">Municipal household</string>
+    <string name="status">In work</string>
+    <string name="created_date">25 february 2016</string>
+    <string name="resolveData">26 february 2016</string>
+    <string name="resposible">Responsible</string>
+    <string name="text_complain">Open the <h></h>atch (near the billboard), the area of rotation 18 and 10 trams at Prospect Mira with the Donetsk highway.</string>
+    <string name="responsibleForValue">Dnipropetrovskiy MVK</string>
+</resources>

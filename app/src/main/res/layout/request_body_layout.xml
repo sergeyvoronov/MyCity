@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/request_body_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/RequestText"
+            android:id="@+id/txt_company"
+            android:text="@string/company"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/tableRow1"
+            android:layout_alignStart="@+id/tableRow1"
+            />
+
+        <ImageView
+            android:id="@+id/status_image"
+            android:layout_width="@dimen/img_status_width"
+            android:layout_height="wrap_content"
+            android:src="@drawable/status"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txt_company"
+            android:layout_marginLeft="60dp"
+            android:layout_above="@+id/txt_create_date"/>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TextStatusRequestStyle"
+            android:text="@string/status"
+            android:layout_above="@+id/tableRow1"
+            android:layout_alignRight="@+id/txt_request_responsible"
+            android:layout_alignEnd="@+id/txt_request_responsible"
+            />
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            style="@style/TableRowStyle"
+            android:layout_below="@+id/txt_company"
+           />
+
+        <TextView
+            style="@style/CaptionText"
+            android:id="@+id/txt_create_date"
+            android:text="@string/created"
+            android:layout_below="@+id/tableRow1"
+            android:layout_alignLeft="@+id/tableRow1"
+            />
+
+        <TextView
+            style="@style/RequestText"
+            android:text="@string/created_date"
+            android:id="@+id/txt_request_create_date"
+            android:layout_above="@+id/tableRow2"
+            android:layout_toRightOf="@+id/txt_company"
+            android:layout_toEndOf="@+id/txt_company"
+            />
+
+        <TableRow
+            style="@style/TableRowStyle"
+            android:layout_below="@+id/txt_create_date"
+            android:id="@+id/tableRow2"/>
+
+        <TextView
+            style="@style/CaptionText"
+            android:id="@+id/txt_register_date"
+            android:text="@string/registered"
+            android:layout_below="@+id/tableRow2"
+            android:layout_alignLeft="@+id/tableRow2"/>
+
+        <TextView
+            style="@style/RequestText"
+            android:text="@string/created_date"
+            android:id="@+id/txt_request_registered_date"
+            android:layout_above="@+id/tableRow3"
+            android:layout_toRightOf="@+id/txt_company"
+            android:layout_toEndOf="@+id/txt_company"
+            />
+
+        <TableRow
+            style="@style/TableRowStyle"
+            android:layout_below="@+id/txt_register_date"
+            android:id="@+id/tableRow3"/>
+
+        <TextView
+            style="@style/CaptionText"
+            android:id="@+id/txt_solve_date"
+            android:text="@string/resolve"
+            android:layout_below="@+id/tableRow3"
+            android:layout_alignLeft="@+id/tableRow3"/>
+
+        <TextView
+            style="@style/RequestText"
+            android:text="@string/resolveData"
+            android:id="@+id/txt_request_solve_date"
+            android:layout_alignBaseline="@+id/txt_solve_date"
+            android:layout_alignBottom="@+id/txt_solve_date"
+            android:layout_alignLeft="@+id/txt_request_registered_date"
+            android:layout_alignStart="@+id/txt_request_registered_date"
+            />
+
+        <TableRow
+            style="@style/TableRowStyle"
+            android:layout_below="@+id/txt_solve_date"
+            android:id="@+id/tableRow4"/>
+
+        <TextView
+            style="@style/CaptionText"
+            android:id="@+id/txt_responsible"
+            android:text="@string/resposible"
+            android:layout_below="@+id/tableRow4"
+            android:layout_alignLeft="@+id/tableRow4"/>
+
+        <TextView
+            style="@style/RequestText"
+            android:text="@string/responsibleForValue"
+            android:id="@+id/txt_request_responsible"
+            android:layout_above="@+id/tableRow5"
+            android:layout_alignLeft="@+id/txt_request_solve_date"
+            android:layout_alignStart="@+id/txt_request_solve_date"
+            />
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            style="@style/TableRowStyle"
+            android:layout_below="@+id/txt_responsible"
+            />
+
+        <TextView
+            android:id="@+id/txt_request_text"
+            style="@style/RequestText"
+            android:text="@string/text_complain"
+            android:layout_below="@+id/tableRow5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/margin10dp"
+            android:layout_marginStart="@dimen/margin10dp"
+            android:layout_alignRight="@+id/tableRow5"
+            android:layout_alignEnd="@+id/tableRow5" />
+    </RelativeLayout>
+</ScrollView>

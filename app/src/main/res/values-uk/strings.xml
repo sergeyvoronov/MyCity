@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Моє місто</string>
+    <string name="request_number">CE-1257283</string>
+    <string name="back">Повернутись</string>
+    <string name="created">Створено</string>
+    <string name="registered">Зареєстровано</string>
+    <string name="resolve">Вирішити до</string>
+    <string name="company">Комунальне господарство</string>
+    <string name="status">В  роботі</string>
+    <string name="created_date">25 лютого 2016</string>
+    <string name="resolveData">26 лютого 2016</string>
+    <string name="resposible">Відповідальний</string>
+    <string name="text_complain">Відкритий люк (біля рекламного щита), район повороту 18 і 19 трамваїв на проспект Миру з Донецького шосе.</string>
+    <string name="responsibleForValue">Дніпропетровський МВК</string>
+</resources>

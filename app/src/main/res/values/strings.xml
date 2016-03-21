@@ -1,0 +1,21 @@
+<resources>
+
+    <string-array name="pic_urls">
+        <item>http://www.s.056.ua/section/newsIconCis2/subdir/full/upload/images/news/icon/35_main_145042374614.jpg</item>
+        <item>http://verniteprava.ru/uploads/posts/2014-04/1397758222_big_321397.jpg</item>
+        <item>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhqB8-1rvPaJYFCnHWn6UplsvLkz6kl94-8Aw362t2uENLmBDG</item>
+    </string-array>
+<string name="app_name">Мой город</string>
+<string name="request_number">CE-1257283</string>
+<string name="back">Назад</string>
+<string name="created">Создано</string>
+<string name="registered">Зарегистрировано</string>
+<string name="resolve">Решить до</string>
+<string name="company">Коммунальное хозяйство</string>
+<string name="status">В  работе</string>
+<string name="created_date">25 февраля 2016</string>
+<string name="resolveData">26 февраля 2016</string>
+<string name="resposible">Отвественный</string>
+<string name="text_complain">Открытый люк(возле рекламного щита), район поворота 18 и 19 трамваев на проспект Мира с Донецкого шоссе.</string>
+<string name="responsibleForValue">Днепропетровский МВК</string>
+</resources>
