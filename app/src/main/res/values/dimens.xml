@@ -8,5 +8,5 @@
     <dimen name="imageView">200dp</dimen>
     <dimen name="text_status_margin">30dp</dimen>
     <dimen name="img_status_width">120dp</dimen>
-    <dimen name="requsrt_image_view_padding">5dp</dimen>
+    <dimen name="requsrt_image_view_padding">3dp</dimen>
 </resources>

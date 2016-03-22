@@ -1,6 +1,9 @@
 package com.yalantis.internship.requestapplication;
 
+import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,9 +34,12 @@ public class ImagesViewAdapter extends RecyclerView.Adapter<ImagesViewAdapter.Im
 
   @Override public void onBindViewHolder(final ImageHolder holder, int position) {
     final ImageModel imageModel = mImages.get(position);
+
+    Resources r = holder.imageView.getResources();
+    int px = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, r.getDisplayMetrics());
     Glide.with(holder.imageView.getContext())
         .load(imageModel.getUrl())
-        .override(300, 300)
+        .override(px, px)
         .centerCrop()
         .into(holder.imageView);
     holder.imageView.setOnClickListener(new View.OnClickListener() {
