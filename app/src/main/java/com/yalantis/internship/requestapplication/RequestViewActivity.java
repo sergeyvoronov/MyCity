@@ -14,13 +14,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+//[Comment] Wrong paddings
+//[Comment] Wrong toolbar and status bar color
+//[Comment] Wrong "In worj label
 public class RequestViewActivity extends AppCompatActivity {
 
   //array of urls images
   private final List<ImageModel> mImagesList = new ArrayList<>();
   //array activity views
-  private final ArrayList<View> mViews = new ArrayList<>();
+  private final ArrayList<View> mViews = new ArrayList<>(); //[Comment] Use abstraction instead of realization
 
 
   @Override protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class RequestViewActivity extends AppCompatActivity {
   //on click listener views. show toast with id name
   private final View.OnClickListener onClickListener = new View.OnClickListener() {
     @Override public void onClick(final View v) {
-      Pattern p = Pattern.compile(".*:id\\/(.*)");
+      Pattern p = Pattern.compile(".*:id\\/(.*)"); //[Comment] Bad idea. Use view.getClass().getSimpleName
       String s = getResources().getResourceName(v.getId());
       Matcher m = p.matcher(s);
       if (m.find()) s = m.group(1);
@@ -68,7 +70,7 @@ public class RequestViewActivity extends AppCompatActivity {
   private void setupUpActionPanel() {
     ActionBar actionBar = getSupportActionBar();
     if (actionBar!=null) {
-      actionBar.setHomeButtonEnabled(true);
+      actionBar.setHomeButtonEnabled(true); //[Comment] Wrong formatting
       actionBar.setDisplayHomeAsUpEnabled(true);
       actionBar.setHomeAsUpIndicator(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
       actionBar.setTitle(getString(R.string.request_number));
@@ -78,7 +80,7 @@ public class RequestViewActivity extends AppCompatActivity {
   //home(up) event action
   @Override public boolean onOptionsItemSelected(MenuItem item) {
     finish();
-    return super.onOptionsItemSelected(item);
+    return super.onOptionsItemSelected(item); //[Comment] Wrong formatting
   }
   //recycleView  show
   private void showImages() {
@@ -94,5 +96,5 @@ public class RequestViewActivity extends AppCompatActivity {
 
     recyclerView.setAdapter(imageViewAdapter);
     recyclerView.setLayoutManager(linearLayoutManager);
-  }
+  }//[Comment] Wrong formatting
 }

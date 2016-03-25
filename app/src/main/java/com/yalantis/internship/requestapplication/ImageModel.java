@@ -1,7 +1,7 @@
 package com.yalantis.internship.requestapplication;
 
 //ImageModel Class for urls
-class ImageModel {
+class ImageModel { //[Comment] You don't need this. Use List of strings
   private final String mUrl;
 
   public ImageModel(String url) {

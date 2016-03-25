@@ -10,6 +10,6 @@ public class DataProvider {
 
   public void setImg_res(int img_res) {
     this.img_res = img_res;
-  }
+  } //[Comment] Dead code
 }
 */

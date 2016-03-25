@@ -32,3 +32,5 @@
     </LinearLayout>
 
 </RelativeLayout>
+
+<!-- [Comment] A lot of hardcode. Use dimens for different screens. Not layouts. Bad practice-->

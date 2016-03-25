@@ -19,7 +19,7 @@ public class ImagesViewAdapter extends RecyclerView.Adapter<ImagesViewAdapter.Im
   private final List<ImageModel> mImages;
 
   public ImagesViewAdapter(List<ImageModel> images) {
-    this.mImages = images;
+    this.mImages = images; //[Comment] Without this
   }
 
   @Override
@@ -29,14 +29,14 @@ public class ImagesViewAdapter extends RecyclerView.Adapter<ImagesViewAdapter.Im
         from(parent.getContext()).
         inflate(R.layout.request_images_layout, parent, false);
 
-    return new ImageHolder(itemView);
+    return new ImageHolder(itemView); //[Comment] Wrong formatting
   }
 
   @Override public void onBindViewHolder(final ImageHolder holder, int position) {
     final ImageModel imageModel = mImages.get(position);
 
     Resources r = holder.imageView.getResources();
-    int px = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, r.getDisplayMetrics());
+    int px = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, r.getDisplayMetrics()); //[Comment] Magic number
     Glide.with(holder.imageView.getContext())
         .load(imageModel.getUrl())
         .override(px, px)
@@ -55,7 +55,7 @@ public class ImagesViewAdapter extends RecyclerView.Adapter<ImagesViewAdapter.Im
       }
     });
 
-    //  holder.imageView.setImageResource(imageModel.getId());
+    //  holder.imageView.setImageResource(imageModel.getId()); //[Comment] Commented code
   }
 
   @Override public int getItemCount() {
@@ -63,7 +63,7 @@ public class ImagesViewAdapter extends RecyclerView.Adapter<ImagesViewAdapter.Im
   }
 
   public static class ImageHolder extends RecyclerView.ViewHolder {
-    final ImageView imageView;
+    final ImageView imageView; //[Comment] Wrong visibility modifier
 
     public ImageHolder(View v) {
       super(v);
