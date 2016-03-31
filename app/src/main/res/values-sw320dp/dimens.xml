@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="caption_text_size">12sp</dimen>
+    <dimen name="margin_left_values">120dp</dimen>
+    <dimen name="image_view_width">100dp</dimen>
+</resources>
