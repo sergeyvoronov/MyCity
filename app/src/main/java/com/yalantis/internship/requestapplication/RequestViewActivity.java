@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class RequestViewActivity extends AppCompatActivity {
     //array activity views
-    //on click listener views. show toast with id name
+    //on click listener views. show toast with class simple name
     private final View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(final View v) {
@@ -31,11 +31,11 @@ public class RequestViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_request_layout);
         showImages();
         ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
-        ArrayList<View> mViews = new ArrayList<>();
+        ArrayList<View> views = new ArrayList<>();
         setupUpActionPanel();
-        mViews = findViews(viewGroup, mViews);
+        views = findViews(viewGroup, views);
         //add onclick listener event views in activity
-        for (View v : mViews) {
+        for (View v : views) {
             v.setOnClickListener(onClickListener);
         }
         setupUpActionPanel();

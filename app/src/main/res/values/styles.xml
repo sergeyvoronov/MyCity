@@ -1,8 +1,7 @@
 <resources>
-    <!-- Base application theme. -->
     <style name="ToolBarStyle" parent="ThemeOverlay.AppCompat.ActionBar">
-        <!-- Parent theme sets colorControlNormal to textColorPrimary. -->
         <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:background">@color/toolbarColor</item>
     </style>
     <style name="CaptionText">
         <item name="android:layout_width">wrap_content</item>
@@ -18,7 +17,7 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">@dimen/request_text_size</item>
     </style>
-    <style name="TableRowStyle">
+    <style name="DelimiterStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/divider_height</item>
         <item name="android:layout_marginTop">@dimen/margin10dp</item>

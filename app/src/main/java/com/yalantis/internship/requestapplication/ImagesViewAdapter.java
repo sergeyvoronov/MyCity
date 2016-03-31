@@ -16,18 +16,16 @@ public class ImagesViewAdapter extends RecyclerView.Adapter<ImagesViewAdapter.Im
 
     private final String[] imagesDataSet;
 
-    // Provide a suitable constructor (depends on the kind of dataset)
     public ImagesViewAdapter(String[] imagesDataSet) {
         this.imagesDataSet = imagesDataSet;
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
     public ImageHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.
                 from(parent.getContext()).
                 inflate(R.layout.request_images_layout, parent, false);
-        return new ImageHolder(itemView); //[Comment] Wrong formatting
+        return new ImageHolder(itemView);
     }
 
     @Override
