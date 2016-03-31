@@ -9,7 +9,7 @@
     <string name="status">В  роботі</string>
     <string name="created_date">25 лютого 2016</string>
     <string name="resolveData">26 лютого 2016</string>
-    <string name="resposible">Відповідальний</string>
+    <string name="responsible">Відповідальний</string>
     <string name="text_complain">Відкритий люк (біля рекламного щита), район повороту 18 і 19 трамваїв на проспект Миру з Донецького шосе.</string>
     <string name="responsibleForValue">Дніпропетровський МВК</string>
 </resources>

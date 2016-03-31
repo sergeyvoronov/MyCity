@@ -1,36 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RequestViewActivity"
-    android:id="@+id/activity_request_layout">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              tools:context=".RequestViewActivity">
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical"
-                  >
-        <include android:id="@+id/request_body_layout"
-                 layout="@layout/request_body_layout"
-                 android:layout_width="match_parent"
-                 android:layout_height="299dp"/>
-
-        <android.support.v7.widget.RecyclerView
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:id="@+id/images_view"
-                android:layout_height="136dp"
-                android:scrollbars="horizontal"
-                android:layout_below="@+id/request_body_layout"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                />
+                android:layout_height="wrap_content"
+                android:background="@color/toolbarColor"
+                android:theme="@style/ToolBarStyle">
+        </android.support.v7.widget.Toolbar>
 
-    </LinearLayout>
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-</RelativeLayout>
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10dp">
 
-<!-- [Comment] A lot of hardcode. Use dimens for different screens. Not layouts. Bad practice-->
+                        <TextView
+                                style="@style/RequestText"
+                                android:id="@+id/txt_company"
+                                android:text="@string/company"
+                                android:layout_alignParentTop="true"
+                                android:layout_height="@dimen/txt_company_name_height"
+                                android:layout_width="wrap_content"/>
+
+                        <ImageView
+                                android:id="@+id/status_image"
+                                android:layout_width="@dimen/image_view_width"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/status"
+                                android:visibility="visible"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@+id/txt_company"
+                                android:layout_marginLeft="@dimen/status_image_margin_left"
+                                android:layout_above="@+id/txt_create_date"
+                                android:height="@dimen/status_image_height"/>
+
+                        <TextView
+                                android:id="@+id/textView"
+                                style="@style/TextStatusRequestStyle"
+                                android:text="@string/status"
+                                android:layout_marginTop="@dimen/status_image_margin_top"
+                                android:layout_alignLeft="@+id/status_image"
+                                android:layout_marginLeft="@dimen/status_text_margin_left"
+                                android:layout_alignStart="@+id/status_image"/>
+
+                        <TableRow
+                                android:id="@+id/tableRow1"
+                                style="@style/TableRowStyle"
+                                android:layout_below="@+id/txt_company"/>
+
+                        <TextView
+                                style="@style/CaptionText"
+                                android:id="@+id/txt_create_date"
+                                android:text="@string/created"
+                                android:layout_below="@+id/tableRow1"
+                                android:layout_alignLeft="@+id/tableRow1"/>
+
+                        <TextView
+                                style="@style/RequestText"
+                                android:text="@string/created_date"
+                                android:id="@+id/txt_request_create_date"
+                                android:layout_alignBaseline="@+id/txt_create_date"
+                                android:layout_alignBottom="@+id/txt_create_date"
+                                android:layout_alignLeft="@+id/txt_create_date"
+                                android:layout_alignStart="@+id/txt_create_date"
+                                android:layout_marginLeft="@dimen/margin_left_values"
+                                android:layout_width="match_parent"/>
+
+                        <TableRow
+                                style="@style/TableRowStyle"
+                                android:layout_below="@+id/txt_create_date"
+                                android:id="@+id/tableRow2"/>
+
+                        <TextView
+                                style="@style/CaptionText"
+                                android:id="@+id/txt_register_date"
+                                android:text="@string/registered"
+                                android:layout_below="@+id/tableRow2"
+                                android:layout_alignLeft="@+id/tableRow2"/>
+
+                        <TextView
+                                style="@style/RequestText"
+                                android:text="@string/created_date"
+                                android:id="@+id/txt_request_registered_date"
+                                android:layout_above="@+id/tableRow3"
+                                android:layout_alignLeft="@+id/txt_register_date"
+                                android:layout_alignStart="@+id/txt_register_date"
+                                android:layout_marginLeft="@dimen/margin_left_values"/>
+
+                        <TableRow
+                                style="@style/TableRowStyle"
+                                android:layout_below="@+id/txt_register_date"
+                                android:id="@+id/tableRow3"/>
+
+                        <TextView
+                                style="@style/CaptionText"
+                                android:id="@+id/txt_solve_date"
+                                android:text="@string/resolve"
+                                android:layout_below="@+id/tableRow3"
+                                android:layout_alignLeft="@+id/tableRow3"/>
+
+                        <TextView
+                                style="@style/RequestText"
+                                android:text="@string/resolveData"
+                                android:id="@+id/txt_request_solve_date"
+                                android:layout_alignBaseline="@+id/txt_solve_date"
+                                android:layout_alignBottom="@+id/txt_solve_date"
+                                android:layout_alignLeft="@+id/txt_solve_date"
+                                android:layout_alignStart="@+id/txt_solve_date"
+                                android:layout_marginLeft="@dimen/margin_left_values"/>
+
+                        <TableRow
+                                style="@style/TableRowStyle"
+                                android:layout_below="@+id/txt_solve_date"
+                                android:id="@+id/tableRow4"/>
+
+                        <TextView
+                                style="@style/CaptionText"
+                                android:id="@+id/txt_responsible"
+                                android:text="@string/responsible"
+                                android:layout_below="@+id/tableRow4"
+                                android:layout_alignLeft="@+id/tableRow4"/>
+
+                        <TextView
+                                style="@style/RequestText"
+                                android:text="@string/responsibleForValue"
+                                android:id="@+id/txt_request_responsible"
+                                android:layout_alignBaseline="@+id/txt_responsible"
+                                android:layout_alignBottom="@+id/txt_responsible"
+                                android:layout_alignLeft="@+id/txt_responsible"
+                                android:layout_alignStart="@+id/txt_responsible"
+                                android:layout_marginLeft="@dimen/margin_left_values"/>
+
+                        <TableRow
+                                android:id="@+id/tableRow5"
+                                style="@style/TableRowStyle"
+                                android:layout_below="@+id/txt_responsible"/>
+
+                        <TextView
+                                android:id="@+id/txt_request_text"
+                                android:textSize="@dimen/caption_text_size"
+                                android:text="@string/text_complain"
+                                android:layout_below="@+id/tableRow5"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginTop="@dimen/request_main_text_margin_top"
+                                android:layout_marginLeft="@dimen/request_main_text_margin_left"
+                                android:layout_marginStart="@dimen/margin10dp"
+                                android:layout_alignRight="@+id/tableRow5"
+                                android:layout_alignEnd="@+id/tableRow5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@android:color/black"/>
+
+                        <android.support.v7.widget.RecyclerView
+                                android:layout_width="wrap_content"
+                                android:id="@+id/images_view"
+                                android:layout_height="@dimen/image_size"
+                                android:scrollbars="horizontal"
+                                android:layout_below="@+id/txt_request_text"
+                                android:layout_alignLeft="@+id/txt_request_text"
+                                android:layout_alignStart="@+id/txt_request_text"
+                                android:layout_marginTop="@dimen/images_view_margin_top"
+                                android:layout_marginRight="@dimen/margin10dp"/>
+
+                </RelativeLayout>
+        </ScrollView>
+</LinearLayout>
+        <!-- [Comment] A lot of hardcode.
+
+        Use dimens for different screens.
+
+         Not layouts. Bad practice-->
