@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 //look at issue please:)
 
 public class RequestViewActivity extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class RequestViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_request_layout);
         showImages();
         ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
-        ArrayList<View> views = new ArrayList<>();
+        List<View> views = new ArrayList<>();
         setupUpActionPanel();
         views = findViews(viewGroup, views);
         //add onclick listener event views in activity
@@ -42,7 +43,7 @@ public class RequestViewActivity extends AppCompatActivity {
     }
 
     //find all views in view group
-    private ArrayList<View> findViews(ViewGroup viewGroup, ArrayList<View> views) {
+    private List<View> findViews(ViewGroup viewGroup, List<View> views) {
         for (int i = 0, N = viewGroup.getChildCount(); i < N; i++) {
             View child = viewGroup.getChildAt(i);
             if (child instanceof ViewGroup) {
